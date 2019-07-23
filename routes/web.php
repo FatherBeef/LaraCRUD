@@ -16,10 +16,15 @@
 // });
 
 Route::get('/', 'PagesController@index');
+Route::get('/about', 'PagesController@about');
+Route::get('/services', 'PagesController@services');
 
-Route::get('/about', function () {
-    return view('pages.about');
-});
+
+
+
+// Route::get('/about', function () {
+//     return view('pages.about');
+// });
 
 /*
 Route::get('/users/{user}/{id}', function ($id, $user) {
