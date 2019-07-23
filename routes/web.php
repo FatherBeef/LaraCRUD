@@ -11,15 +11,19 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+Route::get('/', 'PagesController@index');
 
 Route::get('/about', function () {
     return view('pages.about');
 });
 
-
+/*
 Route::get('/users/{user}/{id}', function ($id, $user) {
     return 'This is user '.$user.', id # '.$id;
 });
+*/
+
