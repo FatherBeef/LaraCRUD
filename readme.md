@@ -13,7 +13,7 @@ Guests can view posts but will be redirected to sign in if they try and post, or
 
 Included CKEDITOR to allow for 'WYSISYG' editing.
 
-__
+___
 
 run `composer install` to get dependencies
 
