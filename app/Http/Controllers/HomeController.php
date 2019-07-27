@@ -3,6 +3,7 @@
 namespace LSapp\Http\Controllers;
 
 use Illuminate\Http\Request;
+use LSapp\User;
 
 class HomeController extends Controller
 {

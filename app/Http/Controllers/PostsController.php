@@ -89,6 +89,10 @@ class PostsController extends Controller
     public function edit($id)
     {
         $post = Postmodel::find($id);
+        //Check for correct user
+        if(auth()->user()->id !== $post->user_id){
+            return redirect('/posts')->with('error', 'You are not the owner of this post.');
+        }
         return view('posts.edit')->with('post', $post);
     }
 
