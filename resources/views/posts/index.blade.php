@@ -14,7 +14,7 @@
                 {{-- Loads in clicked blog post on click --}}
             <h3><a href="/posts/{{$post->id}}">{{$post->title}}</a> </h3>
                 <sup>{{$post->created_at->format('j F, Y')}}</sup>
-                <p>{{$post->body}}</p>
+                <div>{!! $post->body !!}</div>
             </div>
         @endforeach
 

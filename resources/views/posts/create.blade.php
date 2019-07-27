@@ -9,18 +9,11 @@
     <div class="form-group">
         {{ Form::label('title', 'Title')}}
         {{ Form::text('title', '', ['class' => 'form-control', 'placeholder' => 'Post Title'])}}
-
     </div>
     <div class="form-group">
         {{ Form::label('body', 'Enter your post here')}}
-        {{ Form::textarea('body', '', ['class' => 'form-control', 'placeholder' => 'Post Content'])}}
-
+        {{ Form::textarea('body', '', ['id'=>'article-ckeditor', 'class' => 'form-control', 'placeholder' => 'Post Content'])}}
     </div>
-
     {{ Form::submit('Submit', ['class' => 'btn btn-secondary'])}}
-
     {{ Form::close() }}
-
-
-
 @endsection
