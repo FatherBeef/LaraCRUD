@@ -2,7 +2,6 @@
 
 ## A simple CRUD application using Laravel and Bootstrap
 
-___
 
 ### Manipulating a database using Elequent, with user authentication
 
@@ -14,7 +13,7 @@ Guests can view posts but will be redirected to sign in if they try and post, or
 
 Included CKEDITOR to allow for 'WYSISYG' editing.
 
-___
+__
 
 run `composer install` to get dependencies
 
