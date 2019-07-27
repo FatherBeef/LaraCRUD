@@ -16,6 +16,7 @@
                 <sup>{{$post->created_at->format('j F, Y')}}</sup>
                 <div>{!! $post->body !!}</div>
             </div>
+            <hr>
         @endforeach
 
         {{$posts->links()}}
