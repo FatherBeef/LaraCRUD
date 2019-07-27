@@ -33,3 +33,7 @@ Route::get('/users/{user}/{id}', function ($id, $user) {
 });
 */
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
