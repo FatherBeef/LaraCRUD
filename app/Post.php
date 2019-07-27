@@ -11,5 +11,9 @@ class Post extends Model
 		// primary key
 		public $primaryKey = 'id';
 		// Timestamps
-		public $timestamps = true; // default
+        public $timestamps = true; // default
+        // For relationship with POST
+        public function user() {
+            return $this->belongsTo('LSapp\User');
+        }
 }

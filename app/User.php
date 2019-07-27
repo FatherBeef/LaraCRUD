@@ -36,4 +36,8 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+    // For relationship with USER
+    public function posts(){
+        return $this->hasMany('LSapp\Post');
+    }
 }

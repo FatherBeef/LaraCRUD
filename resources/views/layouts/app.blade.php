@@ -33,6 +33,7 @@
 
     <script src="/vendor/unisharp/laravel-ckeditor/ckeditor.js"></script>
     <script>
+        // WYSIWYG Editor
         window.onload = function(){
             CKEDITOR.replace( 'article-ckeditor' );
 

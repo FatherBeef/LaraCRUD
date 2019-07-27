@@ -5,7 +5,9 @@
 
     <h1>For Blog as Blogs</h1>
 <br>
+@if (!Auth::guest())
     <a class="btn btn-primary" href="/posts/create">New Post</a>
+@endif
 <br>
 <br>
     @if (count($posts) > 0)

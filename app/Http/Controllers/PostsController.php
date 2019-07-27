@@ -7,6 +7,17 @@ use LSapp\Post as PostModel;
 
 class PostsController extends Controller
 {
+     /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    function __construct()
+    {   // This is the water shed for users not logged in - except is where permitted pages are added
+        $this->middleware('auth', ['except'=> ['show', 'index', 'posts']]);
+    }
+
+
     /**
      * Display a listing of the resource.
      *
@@ -51,6 +62,7 @@ class PostsController extends Controller
         $post = new Postmodel;
         $post->title = $request->input('title');
         $post->body = $request->input('body');
+        $post->user_id = auth()->user()->id;
         $post->save();
 
         return redirect('/posts')->with('success', 'Post submitted successfully!');

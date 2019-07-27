@@ -11,7 +11,7 @@ class HomeController extends Controller
      *
      * @return void
      */
-    public function __construct()
+    function __construct()
     {
         $this->middleware('auth');
     }
@@ -23,6 +23,10 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $user_id = auth()->user()->id;
+        $user = User::find($user_id);
+        return view('home')->with('posts', $user->posts);
     }
+
+
 }
