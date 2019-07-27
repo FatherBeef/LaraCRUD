@@ -25,7 +25,12 @@ class PostsController extends Controller
      */
     public function create()
     {
-        //
+        $post = new Postmodel();
+
+
+
+
+        return view('posts.create');
     }
 
     /**
@@ -36,7 +41,10 @@ class PostsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'title' => 'required',
+            'body' => 'required'
+        ]);
     }
 
     /**

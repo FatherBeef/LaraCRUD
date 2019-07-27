@@ -4,7 +4,10 @@
 @section('content')
 
     <h1>For Blog as Blogs</h1>
-
+<br>
+    <a class="btn btn-primary" href="/posts/create">New Post</a>
+<br>
+<br>
     @if (count($posts) > 0)
         @foreach ($posts as $post)
             <div class="well">
